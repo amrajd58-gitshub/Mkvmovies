@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Movie Detail - mkvCinemas</title>
+<link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo"><a href="/"><img src="static/assets/logo.png" alt="Logo" height="40"/></a></div>
+    <nav class="main-nav">
+      <a href="https://swogex.com/">Bollywood</a>
+      <a href="https://swogex.com/reels">Hollywood</a>
+      <a href="https://swogex.com/school">Hindi</a>
+      <a href="https://swogex.com/schoolgirl-video">English</a>
+      <a href="https://swogex.com/desi-girl-reels">Web Series</a>
+      <a href="https://swogex.com/bhabhi">Dubbed</a>
+      <a href="https://swogex.com/bhabhireel">More</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div id="adModal" class="ad-modal">
+    <div class="ad-content">
+      <video id="adVideo" controls autoplay>
+        <source src="static/assets/ad.mp4" type="video/mp4">
+        आपका ब्राउज़र वीडियो नहीं चला सकता।
+      </video>
+      <button id="skipAd" class="skip-btn">Skip Ad</button>
+    </div>
+  </div>
+
+  <article id="movieDetail" class="movie-detail hidden">
+    <img id="poster" src="" alt="poster" class="detail-poster" />
+    <div class="detail-info">
+      <h1 id="title"></h1>
+      <p id="overview"></p>
+      <p><strong>Release:</strong> <span id="release"></span></p>
+      <div class="download-buttons">
+        <a id="btn1080" class="dl-btn" href="https://swogex.com/" target="_blank">1080p Full Movie</a>
+        <a id="btn720" class="dl-btn" href="https://swogex.com/reels" target="_blank">720p Full Movie</a>
+        <a id="btn480" class="dl-btn" href="https://swogex.com/school" target="_blank">480p Full Movie</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>mkvCinemas.Com © 2025
+
+Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+</footer>
+
+<script src="scripts/movie.js"></script>
+</body>
+</html>

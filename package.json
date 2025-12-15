@@ -1,0 +1,12 @@
+{
+  "name": "movie-grid-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build-data": "node fetch_tmdb.js",
+    "start": "npx live-server"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "mkdirp": "^1.0.4"
+  }
+}
