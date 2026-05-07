@@ -1,18 +1,23 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Limited Time Offer</title><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-JW4FJTR734"></script><script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);} 
-gtag('js', new Date());
+<title>Limited Time Offer</title>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JW4FJTR734"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 gtag('config', 'G-JW4FJTR734');
-</script><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 
 body{background:#0f5132;color:#fff;}
-
 .container{max-width:900px;margin:auto;padding:15px;}
 
 .header{text-align:center;margin-bottom:15px;}
@@ -25,37 +30,87 @@ body{background:#0f5132;color:#fff;}
   margin-top:10px;
   font-size:20px;
   font-weight:bold;
-  color:#fff;
-  box-shadow:0 8px 0 #4b0082, 0 15px 25px rgba(0,0,0,0.4);
+  box-shadow:0 8px 0 #4b0082,0 15px 25px rgba(0,0,0,0.4);
 }
 
-.big-card{margin-top:15px;border-radius:15px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.3);} 
-.big-card img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-}
+.big-card img{width:100%;border-radius:15px;}
 
-/* Ad section */
 .ad-box{
-  width:300px;
-  height:50px;
-  margin:15px auto;
-  background:#fff;
+  width:300px;height:50px;margin:15px auto;
+  background:#fff;color:#000;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:15px;
+}
+
+/* PROFILE CARD */
+.profile-card{
+  background:#1e1b6b;
+  border-radius:20px;
+  padding:10px;
+  text-decoration:none;
+  color:#fff;
+  box-shadow:0 0 0 3px #00ff2a,0 10px 25px rgba(0,0,0,0.4);
+}
+
+.profile-img{position:relative;}
+.profile-img img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.online-badge{
+  position:absolute;
+  top:8px;
+  left:8px;
+  background:rgba(255,255,255,0.85);
   color:#000;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
   display:flex;
   align-items:center;
-  justify-content:center;
-  font-size:12px;
-  border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  gap:5px;
 }
 
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:15px;}
+.online-dot{
+  width:8px;height:8px;
+  background:#00ff2a;
+  border-radius:50%;
+  animation:pulse 1.2s infinite;
+}
 
-.card{background:#fff;color:#000;border-radius:12px;overflow:hidden;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.2);} 
-.card img{width:100%;height:110px;object-fit:cover;}
-.card a{display:block;padding:8px;text-decoration:none;color:#000;font-weight:bold;font-size:13px;}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.4);}
+  100%{transform:scale(1);}
+}
+
+.profile-info{
+  background:#1faa2b;
+  margin-top:10px;
+  padding:10px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.call-btn{
+  background:#d1e7dd;
+  margin-top:10px;
+  padding:10px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  color:#000;
+}
 
 .info{
   margin-top:20px;
@@ -83,126 +138,143 @@ body{background:#0f5132;color:#fff;}
   position:absolute;
   left:0;
   color:#22c55e;
-  font-weight:bold;
 }
 
 @media(max-width:600px){
-  .grid{grid-template-columns:repeat(2,1fr);} 
+  .grid{grid-template-columns:repeat(2,1fr);}
 }
+</style>
+</head>
 
-/* LIVE DOT */
-.live-dot{
-  position:absolute;
-  top:8px;
-  left:8px;
-  width:10px;
-  height:10px;
-  background:#22c55e;
-  border-radius:50%;
-  box-shadow:0 0 0 rgba(34,197,94,0.7);
-  animation:pulse 1.5s infinite;
-}
+<body>
+<div class="container">
 
-/* PULSE ANIMATION */
-@keyframes pulse{
-  0%{
-    transform:scale(1);
-    box-shadow:0 0 0 0 rgba(34,197,94,0.7);
-  }
-  70%{
-    transform:scale(1.5);
-    box-shadow:0 0 0 10px rgba(34,197,94,0);
-  }
-  100%{
-    transform:scale(1);
-    box-shadow:0 0 0 0 rgba(34,197,94,0);
-  }
-}
-
-/* Card relative for dot */
-.card{
-  position:relative;
-}
-
-</style></head>
-<body><div class="container"><div class="header">
+<div class="header">
   <h1>🔥 Limited Time Offer</h1>
   <div class="timer" id="countdown">04:00:00</div>
-</div><div class="big-card">
-  <img src="images/big.jpg">
-</div><!-- Ad below big image --><div class="ad-box">300 x 50 Ad Space</div><div class="grid">
-  <div class="card">
-  <span class="live-dot"></span>
-
-  <a href="https://todaykaka.com/best-credit-card-for-beginners-india">
-    <img src="images/1.jpg">
-  </a>
-
-  <a href="https://todaykaka.com/best-credit-card-for-beginners-india">
-    Credit Card Guide
-  </a>
 </div>
 
-  <div class="card"><img src="images/2.jpg"><a href="https://todaykaka.com/best-loan-apps-india-instant-cash">Loan Apps</a></div>
-  <div class="card"><img src="images/3.jpg"><a href="https://todaykaka.com/business-loan-without-collateral-india">Business Loan</a></div>
-  <div class="card"><img src="images/4.jpg"><a href="https://todaykaka.com/get-personal-loan-without-credit-check">No Credit Loan</a></div>
-  <div class="card"><img src="images/5.jpg"><a href="https://todaykaka.com/instant-loan-online-approval-in-minutes">Instant Loan</a></div>
-  <div class="card"><img src="images/6.jpg"><a href="https://todaykaka.com/emergency-loan-online-instant-approval">Emergency Loan</a></div>
-  <div class="card"><img src="images/7.jpg"><a href="https://todaykaka.com/gold-loan-interest-rate-today-india">Gold Loan</a></div>
-  <div class="card"><img src="images/8.jpg"><a href="https://todaykaka.com/car-loan-zero-down-payment-india">Car Loan</a></div>
-  <div class="card"><img src="images/9.jpg"><a href="https://todaykaka.com/guaranteed-approval-loans-for-bad-credit">Bad Credit Loan</a></div>
-  <div class="card"><img src="images/10.jpg"><a href="https://todaykaka.com/personal-loan-emi-calculator-guide">EMI Guide</a></div>
-</div><!-- Ad above info --><div class="ad-box">300 x 50 Ad Space</div><div class="info">
-  <h2>महत्वपूर्ण जानकारी</h2>
+<div class="big-card">
+  <img src="images/big.jpg">
+</div>
+
+<div class="ad-box">300 x 50 Ad</div>
+
+<div class="grid">
+
+<a href="https://todaykaka.com/best-credit-card-for-beginners-india" class="profile-card">
+<div class="profile-img"><img src="images/1.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Pari</h3><p>Age 18</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/best-loan-apps-india-instant-cash" class="profile-card">
+<div class="profile-img"><img src="images/2.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Radha</h3><p>Age 20</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/business-loan-without-collateral-india" class="profile-card">
+<div class="profile-img"><img src="images/3.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Neha</h3><p>Age 19</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/get-personal-loan-without-credit-check" class="profile-card">
+<div class="profile-img"><img src="images/4.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Pooja</h3><p>Age 21</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/instant-loan-online-approval-in-minutes" class="profile-card">
+<div class="profile-img"><img src="images/5.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Kajal</h3><p>Age 22</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/emergency-loan-online-instant-approval" class="profile-card">
+<div class="profile-img"><img src="images/6.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Riya</h3><p>Age 18</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/gold-loan-interest-rate-today-india" class="profile-card">
+<div class="profile-img"><img src="images/7.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Anjali</h3><p>Age 23</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/car-loan-zero-down-payment-india" class="profile-card">
+<div class="profile-img"><img src="images/8.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Simran</h3><p>Age 20</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/guaranteed-approval-loans-for-bad-credit" class="profile-card">
+<div class="profile-img"><img src="images/9.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Sneha</h3><p>Age 19</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+<a href="https://todaykaka.com/personal-loan-emi-calculator-guide" class="profile-card">
+<div class="profile-img"><img src="images/10.jpg"><div class="online-badge"><span class="online-dot"></span> Online</div></div>
+<div class="profile-info"><h3>Priya</h3><p>Age 21</p></div>
+<div class="call-btn">📞 Video Call</div>
+</a>
+
+</div>
+
+<div class="ad-box">300 x 50 Ad</div>
+
+<!-- SAME INFO CONTENT -->
+<div class="info">
+<h2>महत्वपूर्ण जानकारी</h2>
 <p>
 यह प्लेटफ़ॉर्म यूजर्स को सुरक्षित और आसान तरीके से ऑनलाइन कनेक्ट करने का विकल्प देता है। 
 यहाँ आप रियल प्रोफाइल्स के साथ इंटरैक्ट कर सकते हैं और अपनी पसंद के अनुसार बातचीत शुरू कर सकते हैं।
 </p>
 
 <ul>
-  <li>✔ 100% सुरक्षित और प्राइवेट प्लेटफ़ॉर्म</li>
-  <li>✔ आसान और तेज़ कनेक्शन प्रक्रिया</li>
-  <li>✔ रियल यूजर्स के साथ बातचीत का मौका</li>
-  <li>✔ आपकी जानकारी पूरी तरह सुरक्षित रहती है</li>
-  <li>✔ मोबाइल और डेस्कटॉप दोनों पर सपोर्ट</li>
+<li>✔ 100% सुरक्षित और प्राइवेट प्लेटफ़ॉर्म</li>
+<li>✔ आसान और तेज़ कनेक्शन प्रक्रिया</li>
+<li>✔ रियल यूजर्स के साथ बातचीत का मौका</li>
+<li>✔ आपकी जानकारी पूरी तरह सुरक्षित रहती है</li>
+<li>✔ मोबाइल और डेस्कटॉप दोनों पर सपोर्ट</li>
 </ul>
 
 <p>
 ध्यान दें: बेहतर अनुभव के लिए केवल आधिकारिक लिंक का ही उपयोग करें और अपनी व्यक्तिगत जानकारी किसी के साथ शेयर न करें।
 </p>
-<p style="color:#0b3c5d; font-weight:bold; text-align:center;">
+
+<p style="color:#0b3c5d;font-weight:bold;text-align:center;">
 ⚡ सीमित समय के लिए ऑफर – अभी जुड़ें और तुरंत कनेक्ट करें
 </p>
-<!-- 🔥 NEW BUTTON -->
-  <a href="process.html" style="
-  display:block;
-  text-align:center;
-  background:#0b5ed7;
-  color:#fff;
-  padding:12px;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;">
-  👉 फ्री विडियो काल कैसे करें यहाँ देखें
-  </a>
 
-</div></div><script>
-let time = 4 * 60 * 60;
-setInterval(() => {
-  let h = Math.floor(time/3600);
-  let m = Math.floor((time%3600)/60);
-  let s = time%60;
-  document.getElementById("countdown").innerText =
-    String(h).padStart(2,'0')+":"+
-    String(m).padStart(2,'0')+":"+
-    String(s).padStart(2,'0');
-  if(time>0) time--;
+<a href="process.html" style="
+display:block;text-align:center;
+background:#0b5ed7;color:#fff;
+padding:12px;border-radius:25px;
+margin-top:15px;text-decoration:none;">
+👉 फ्री विडियो काल कैसे करें यहाँ देखें
+</a>
+
+</div>
+
+</div>
+
+<script>
+let time = 4*60*60;
+setInterval(()=>{
+let h=Math.floor(time/3600);
+let m=Math.floor((time%3600)/60);
+let s=time%60;
+document.getElementById("countdown").innerText=
+String(h).padStart(2,'0')+":"+
+String(m).padStart(2,'0')+":"+
+String(s).padStart(2,'0');
+if(time>0) time--;
 },1000);
+</script>
 
-history.pushState(null,null,location.href);
-window.onpopstate=function(){
-  location.href="https://wpsite.dirtypush.com";
-};
-</script></body>
+</body>
 </html>
